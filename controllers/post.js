@@ -1,11 +1,12 @@
+/* eslint-disable no-underscore-dangle */
 
 const Post = require('../models/Post');
 
 exports.createPost = async (req, res, next) => {
   try {
     const post = new Post(req.body);
-    await post.save();
-    res.sendStatus(201);
+    const doc = await post.save();
+    res.status(201).json({ postId: doc._id });
   } catch (error) {
     next(error);
   }

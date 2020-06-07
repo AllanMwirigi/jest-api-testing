@@ -41,6 +41,9 @@ if (process.env.NODE_ENV_TESTING === 'true') {
   } catch (error) {
     logger.error(`Mongoose | ${error.message}`);
   }
+} else {
+  // connect to local/remote mongodb instance
+  logger.debug('using real mongodb instance');
 }
 
 // Get the default connection
