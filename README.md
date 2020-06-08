@@ -7,5 +7,7 @@ This in my opinion gives a much easier way of testing an API than using somethin
 As powerful as Postman is, using it for testing is still more of a manual process.\
 This is setup is also ideal for a CI/CD setup.\
 
+The test files can be found in the __tests__ folder. \
+
 The result\
 ![image info](./pic.png)
